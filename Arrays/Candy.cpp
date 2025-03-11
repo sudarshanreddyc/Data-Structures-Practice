@@ -6,7 +6,6 @@ public:
         int n = ratings.size();
         if (n == 1)
             return 1;
-        int extra = 0;
         vector<int> candies(ratings.size(), 1);
 
         for (int i = 1; i < n; i++)
@@ -18,9 +17,9 @@ public:
         }
         for (int i = n - 2; i >= 0; i--)
         {
-            if (ratings[i] > ratings[i + 1] && !(candies[i] > candies[i + 1]))
+            if (ratings[i] > ratings[i + 1])
             {
-                candies[i] = candies[i + 1] + 1;
+                candies[i] = max(candies[i], candies[i + 1] + 1);
             }
         }
         int total = 0;
