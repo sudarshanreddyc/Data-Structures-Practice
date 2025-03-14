@@ -12,7 +12,7 @@ public:
         {
             if (nums[j] != 0)
             {
-                swap(nums[i++], nums[j++]);
+                nums[i++] = nums[j++];
             }
             else
                 j++;
