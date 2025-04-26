@@ -23,7 +23,6 @@ public:
     // }
     int lengthOfLastWord(string s)
     {
-        bool wordStarted = false;
         int i = s.length() - 1;
         int len = 0;
         while (i >= 0 && s[i] == ' ')
